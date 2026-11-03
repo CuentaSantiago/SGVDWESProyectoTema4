@@ -14,22 +14,12 @@
         <header><h1>Codigo CargaInicialDBSGVDWESProyectoTema4</h1></header>
         <h1><a href='../indexProyectoTema4.php'>volver</a></h1>
         <pre>
-            <code style="color: #000000">&lt;!DOCTYPE html&gt;
-            &lt;!--
-            Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-            Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to edit this template
-            --&gt;
-            &lt;html&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;title&gt;&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
+            <code>
                 <blockquote>
-                    <span style="color: #DD0000">DROP DATABASE IF EXISTS DB2SGVDWESProyectoTema4;</span>
-                    <span style="color: #DD0000">DROP USER 'adminsql'@'localhost';</span>
-                </blockquote>    &lt;/body&gt;
-            &lt;/html&gt;
+                    <?php
+                        highlight_file("../scriptDB/BorraDBSGVDWESProyectoTema4.sql");
+                    ?>
+                </blockquote>
             </code>
         </pre>
     </body>

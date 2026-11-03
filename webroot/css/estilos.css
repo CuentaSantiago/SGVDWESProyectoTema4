@@ -37,6 +37,7 @@ div {
 /* Ajustes tabla */
 table{
     padding-top: 20px;
+    padding-bottom: 20px;
     margin: 0 auto;
     justify-content: center;
     align-items: center;

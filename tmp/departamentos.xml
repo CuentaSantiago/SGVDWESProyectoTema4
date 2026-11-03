@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<departamentos>
+  <departamento>
+    <T02_CodDepartamento>ADM</T02_CodDepartamento>
+    <T02_DescDepartamento>Administración</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>125000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento></T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>COM</T02_CodDepartamento>
+    <T02_DescDepartamento>Comercial</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>240000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento></T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>EEE</T02_CodDepartamento>
+    <T02_DescDepartamento>EEE</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2020-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>30</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2030-01-15 09:00:00</T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>EJE</T02_CodDepartamento>
+    <T02_DescDepartamento>Ejemplo</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2026-10-07 00:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>22</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2026-10-03 00:00:00</T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>FIN</T02_CodDepartamento>
+    <T02_DescDepartamento>Finanzas</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>180000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2024-07-28 10:00:00</T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>INV</T02_CodDepartamento>
+    <T02_DescDepartamento>Inversiones</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>310000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento></T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>OPT</T02_CodDepartamento>
+    <T02_DescDepartamento>Optimizaciones</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>180000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2024-07-28 10:00:00</T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>PRO</T02_CodDepartamento>
+    <T02_DescDepartamento>Departamento de Programación</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>40000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2029-01-15 09:00:00</T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>PUB</T02_CodDepartamento>
+    <T02_DescDepartamento>Departamento de Publicidad</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>40000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2029-01-15 09:00:00</T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>SAN</T02_CodDepartamento>
+    <T02_DescDepartamento>Departamento de Sanidad</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>40000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2029-01-15 09:00:00</T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>SOS</T02_CodDepartamento>
+    <T02_DescDepartamento>Despartamentop de sostenivilidad</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2020-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>3000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2040-01-15 09:00:00</T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>TEC</T02_CodDepartamento>
+    <T02_DescDepartamento>Tecnología</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>310000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento></T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>TRB</T02_CodDepartamento>
+    <T02_DescDepartamento>Despartamentop de derechos de los trabajadores</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>5000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2030-01-15 09:00:00</T02_FechaBajaDepartamento>
+  </departamento>
+  <departamento>
+    <T02_CodDepartamento>VEN</T02_CodDepartamento>
+    <T02_DescDepartamento>Ventas</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>275000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento></T02_FechaBajaDepartamento>
+  </departamento>
+</departamentos>

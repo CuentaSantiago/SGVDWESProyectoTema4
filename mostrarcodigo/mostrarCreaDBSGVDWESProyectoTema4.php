@@ -14,24 +14,12 @@
         <header><h1>Codigo CreaDBSGVDWESProyectoTema4</h1></header>
         <h1><a href='../indexProyectoTema4.php'>volver</a></h1>
         <pre>
-            <code style="color: #000000">&lt;!DOCTYPE html&gt;
-            &lt;!--
-            Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-            Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to edit this template
-            --&gt;
-            &lt;html&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;title&gt;&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
+            <code>
                 <blockquote>
-                    <span style="color: #DD0000">CREATE USER 'userSGVDWESProyectoTema4'@'%' IDENTIFIED BY 'paso';</span>
-                    <span style="color: #DD0000">GRANT ALL PRIVILEGES ON *.* TO 'userSGVDWESProyectoTema4'@'%' WITH GRANT OPTION</span>;
-                    <span style="color: #DD0000">FLUSH PRIVILEGES;</span>
-                    <span style="color: #0000BB">CREATE DATABASE IF NOT EXISTS DBSGVDWESProyectoTema4;</span>
-                </blockquote>    &lt;/body&gt;
-            &lt;/html&gt;
+                    <?php
+                    highlight_file("../scriptDB/CreaDBSGVDWESProyectoTema4.sql");
+                    ?>
+                </blockquote>
             </code>
         </pre>
     </body>

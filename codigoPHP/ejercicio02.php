@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Ejercicio 2</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             table, td, tr, th{
                 border: 3px solid black;
@@ -9,6 +10,7 @@
         </style>
     </head>
     <body>
+        <h1><a href='../indexProyectoTema4.php'>volver</a></h1>
         <?php
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
@@ -45,6 +47,10 @@
                 echo "<table>";
             }catch(PDOException $e){//para atrapar excepciones
                 echo $e->getMessage()."<br>";
+            }
+            finally {
+            // Cierra la conexion con la base de datos
+                unset($Transaccion);
             }
         ?>
     </body>

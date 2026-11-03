@@ -14,26 +14,12 @@
         <header><h1>Codigo CargaInicialDBSGVDWESProyectoTema4</h1></header>
         <h1><a href='../indexProyectoTema4.php'>volver</a></h1>
         <pre>
-            <code style="color: #000000">&lt;!DOCTYPE html&gt;
-            &lt;!--
-            Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-            Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to edit this template
-            --&gt;
-            &lt;html&gt;
-                &lt;head&gt;
-                    &lt;meta charset="UTF-8"&gt;
-                    &lt;title&gt;&lt;/title&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
+            <code>
                 <blockquote>
-                    <span style="color: #DD0000">CREATE TABLE T02_DEPARTAMENTO(</span>
-                    <span style="color: #DD0000">T02_CodDepartamento PRIMARY KEY VARCHAR(3),</span>;
-                    <span style="color: #0000BB">T02_DescDepartamento CHAR(255) not null,</span>
-                    <span style="color: #DD0000">T02_FechaCreacionDepartamento DATETIME default default current_timestamp,</span>
-                    <span style="color: #DD0000">T02_VolumenDeNegocio FLOAT default 0,</span>;
-                    <span style="color: #0000BB">T02_FechaBajaDepartamento DATETIME default default current_timestamp,</span>
-                </blockquote>    &lt;/body&gt;
-            &lt;/html&gt;
+                    <?php
+                    highlight_file("../scriptDB/CargaInicialDBSGVDWESProyectoTema4.sql");
+                    ?>
+                </blockquote>
             </code>
         </pre>
     </body>
