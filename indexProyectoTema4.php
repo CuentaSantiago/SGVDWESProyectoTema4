@@ -89,6 +89,14 @@
                     <td><a href="codigoPHP/ejercicio06.php">Ejecutar</a></td>
                     <td><a href="mostrarcodigo/muestraEjercicio06.php">Mostrar</a></td>
                 </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
+                        fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
+                        encuentra en el directorio .../tmp/ del servidor.</td>
+                    <td><a href="codigoPHP/ejercicio08.php">Ejecutar</a></td>
+                    <td><a href="mostrarcodigo/muestraEjercicio08.php">Mostrar</a></td>
+                </tr>
             </tbody>
         </table>
         <footer>
