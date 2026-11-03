@@ -36,8 +36,9 @@
                         $registosPreparados->bindParam(":T02_DescDepartamento", $registros->getElementsByTagName("T02_DescDepartamento")->item(0)->nodeValue);
                         $registosPreparados->bindParam(":T02_FechaCreacionDepartamento", $registros->getElementsByTagName("T02_FechaCreacionDepartamento")->item(0)->nodeValue);
                         $registosPreparados->bindParam(":T02_VolumenDeNegocio", $registros->getElementsByTagName("T02_VolumenDeNegocio")->item(0)->nodeValue);
-                        $fechaBaja=$registros->getElementsByTagName("T02_FechaBajaDepartamento")->item(0);
-                        $registosPreparados->bindParam(":T02_FechaBajaDepartamento", ($fechaBaja && trim($fechaBaja->nodeValue) !== '') ? $fechaBaja->nodeValue : null );
+                        $nullFechaBaja=$registros->getElementsByTagName(":T02_FechaBajaDepartamento")->item(0);
+                        $FechaBaja=($nullFechaBaja && trim($nullFechaBaja->nodeValue) !== '') ? $nullFechaBaja->nodeValue : null;
+                        $registosPreparados->bindParam(":T02_FechaBajaDepartamento", $FechaBaja);
                         $registosPreparados->execute();
                     }
                     $miDB->commit(); // Confirma los cambios y los consolida
