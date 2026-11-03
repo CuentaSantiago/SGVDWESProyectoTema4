@@ -1,13 +1,8 @@
 <html>
     <head>
         <title>Ejercicio 8</title>
+        <link rel="stylesheet" type="text/css" href="webroot/css/estilos.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            table, td, tr, th{
-                border: 3px solid black;
-                border-collapse: collapse;
-            }
-        </style>
     </head>
     <body>
         <h1><a href='../indexProyectoTema4.php'>volver</a></h1>
@@ -20,7 +15,7 @@
         require_once '../core/ConexionDB.php'; //archivo para conexion a la base de datos
             try{
                 $miDB = new PDO($host,$USER,$PASSWORD); //conexion a la base de datos
-                $sql = 'SELECT T02_CodDepartamento, T02_DescDepartamento FROM T02_DEPARTAMENTO';
+                $sql = 'SELECT * FROM T02_DEPARTAMENTO';
                 $consultaPreparada = $miDB->prepare($sql);
                 $consultaPreparada->execute();
                 // Si hay registros, comenzamos a generar el XML
@@ -33,14 +28,26 @@
                     while($CamposD = $consultaPreparada->fetchObject()){
                         $Camposxml = $dXML->createElement('departamento');
                         // Creamos el codigo, añadimos un texto y lo colgamos como departamento
-                        $sCod = $dXML->createElement('codigo');
+                        $sCod = $dXML->createElement('T02_CodDepartamento');
                         // Crea texto y Usos de appendChild
                         $sCod->appendChild($dXML->createTextNode($CamposD->T02_CodDepartamento));
                         $Camposxml->appendChild($sCod);
                         // Creamos la descripcion, añadimos un texto y lo colgamos de departamento
-                        $sDesc = $dXML->createElement('descripcion');
+                        $sDesc = $dXML->createElement('T02_DescDepartamento');
                         $sDesc->appendChild($dXML->createTextNode($CamposD->T02_DescDepartamento));
                         $Camposxml->appendChild($sDesc);
+                        // Creamos el FechaCreacion, añadimos un texto y lo colgamos como departamento
+                        $sFechaCreacion = $dXML->createElement('T02_FechaCreacionDepartamento');
+                        $sFechaCreacion->appendChild($dXML->createTextNode($CamposD->T02_FechaCreacionDepartamento));
+                        $Camposxml->appendChild($sFechaCreacion);
+                        // Creamos la volumen, añadimos un texto y lo colgamos de departamento
+                        $sVolumen = $dXML->createElement('T02_VolumenDeNegocio');
+                        $sVolumen->appendChild($dXML->createTextNode($CamposD->T02_VolumenDeNegocio));
+                        $Camposxml->appendChild($sVolumen);
+                        // Creamos la descripcion, añadimos un texto y lo colgamos de departamento
+                        $sFechaBaja = $dXML->createElement('T02_FechaBajaDepartamento');
+                        $sFechaBaja->appendChild($dXML->createTextNode($CamposD->T02_FechaBajaDepartamento ?? 'null'));
+                        $Camposxml->appendChild($sFechaBaja);
                         // Colgamos el departamento completo de la raiz departamentos
                         $inicio->appendChild($Camposxml);
                     }

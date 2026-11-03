@@ -46,16 +46,17 @@
                 $Transaccion->beginTransaction();
                 $sqlInsert = <<<sql
                                 INSERT INTO T02_DEPARTAMENTO (T02_CodDepartamento, T02_DescDepartamento, T02_FechaCreacionDepartamento, T02_VolumenDeNegocio, T02_FechaBajaDepartamento)
-                                VALUES (?, ?, ?, ?, ?)
+                                VALUES (:T02_CodDepartamento, :T02_DescDepartamento, :T02_FechaCreacionDepartamento, :T02_VolumenDeNegocio, :T02_FechaBajaDepartamento)
                             sql;
                 $registosPreparados = $Transaccion->prepare($sqlInsert); //para empezar a probas los nuevos registros
                 
                 foreach($aregistros as $registros){
-                    $registosPreparados->execute([$registros["T02_CodDepartamento"],
-                            $registros["T02_DescDepartamento"],
-                            $registros["T02_FechaCreacionDepartamento"],
-                            $registros["T02_VolumenDeNegocio"],
-                            $registros["T02_FechaBajaDepartamento"]]);
+                    $registosPreparados->bindParam(":T02_CodDepartamento", $registros["T02_CodDepartamento"]);
+                    $registosPreparados->bindParam(":T02_DescDepartamento", $registros["T02_DescDepartamento"]);
+                    $registosPreparados->bindParam(":T02_FechaCreacionDepartamento", $registros["T02_FechaCreacionDepartamento"]);
+                    $registosPreparados->bindParam(":T02_VolumenDeNegocio", $registros["T02_VolumenDeNegocio"]);
+                    $registosPreparados->bindParam(":T02_FechaBajaDepartamento", $registros["T02_FechaBajaDepartamento"]);
+                    $registosPreparados->execute();
                 }
                 $Transaccion->commit(); // Confirma los cambios y los consolida
                 $resultadoConsulta = $Transaccion->query('select * from T02_DEPARTAMENTO');//consulta

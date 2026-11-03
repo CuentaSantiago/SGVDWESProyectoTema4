@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<departamentos>
+  <departamento>
+    <codigo>ADM</codigo>
+    <descripcion>Administración</descripcion>
+    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
+    <volumen>125000</volumen>
+    <fechaBaja>null</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>COM</codigo>
+    <descripcion>Comercial</descripcion>
+    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
+    <volumen>240000</volumen>
+    <fechaBaja>null</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>EEE</codigo>
+    <descripcion>EEE</descripcion>
+    <FechaCreacion>2020-01-15 09:00:00</FechaCreacion>
+    <volumen>30</volumen>
+    <fechaBaja>2030-01-15 09:00:00</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>EJE</codigo>
+    <descripcion>Ejemplo</descripcion>
+    <FechaCreacion>2026-10-07 00:00:00</FechaCreacion>
+    <volumen>22</volumen>
+    <fechaBaja>2026-10-03 00:00:00</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>FIN</codigo>
+    <descripcion>Finanzas</descripcion>
+    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
+    <volumen>180000</volumen>
+    <fechaBaja>2024-07-28 10:00:00</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>INV</codigo>
+    <descripcion>Inversiones</descripcion>
+    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
+    <volumen>310000</volumen>
+    <fechaBaja>null</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>OPT</codigo>
+    <descripcion>Optimizaciones</descripcion>
+    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
+    <volumen>180000</volumen>
+    <fechaBaja>2024-07-28 10:00:00</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>PRO</codigo>
+    <descripcion>Departamento de Programación</descripcion>
+    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
+    <volumen>40000</volumen>
+    <fechaBaja>2029-01-15 09:00:00</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>PUB</codigo>
+    <descripcion>Departamento de Publicidad</descripcion>
+    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
+    <volumen>40000</volumen>
+    <fechaBaja>2029-01-15 09:00:00</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>SAN</codigo>
+    <descripcion>Departamento de Sanidad</descripcion>
+    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
+    <volumen>40000</volumen>
+    <fechaBaja>2029-01-15 09:00:00</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>SOS</codigo>
+    <descripcion>Despartamentop de sostenivilidad</descripcion>
+    <FechaCreacion>2020-01-15 09:00:00</FechaCreacion>
+    <volumen>3000</volumen>
+    <fechaBaja>2040-01-15 09:00:00</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>TEC</codigo>
+    <descripcion>Tecnología</descripcion>
+    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
+    <volumen>310000</volumen>
+    <fechaBaja>null</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>TRB</codigo>
+    <descripcion>Despartamentop de derechos de los trabajadores</descripcion>
+    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
+    <volumen>5000</volumen>
+    <fechaBaja>2030-01-15 09:00:00</fechaBaja>
+  </departamento>
+  <departamento>
+    <codigo>VEN</codigo>
+    <descripcion>Ventas</descripcion>
+    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
+    <volumen>275000</volumen>
+    <fechaBaja>null</fechaBaja>
+  </departamento>
+</departamentos>
