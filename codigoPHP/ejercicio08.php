@@ -46,13 +46,13 @@
                         $Camposxml->appendChild($sVolumen);
                         // Creamos la descripcion, añadimos un texto y lo colgamos de departamento
                         $sFechaBaja = $dXML->createElement('T02_FechaBajaDepartamento');
-                        $sFechaBaja->appendChild($dXML->createTextNode($CamposD->T02_FechaBajaDepartamento ?? 'null'));
+                        $sFechaBaja->appendChild($dXML->createTextNode($CamposD->T02_FechaBajaDepartamento ?? ''));
                         $Camposxml->appendChild($sFechaBaja);
                         // Colgamos el departamento completo de la raiz departamentos
                         $inicio->appendChild($Camposxml);
                     }
                     $directorio = dirname(__DIR__).'/tmp/';
-                    // Ruta absoluta para que el servidor guarde el archivo
+                    // Ruta absoluta para que el servidor guarde el archivo fuera del direcotio de ejercicios pero dentro del tema 4
                     $Guardar = $directorio . 'departamentos.xml';
                     // Guardamos el archivo XML generado en el servidor
                     // Guarda el documento XML en un fichero

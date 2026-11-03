@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <departamentos>
   <departamento>
-    <codigo>ADM</codigo>
-    <descripcion>Administración</descripcion>
-    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
-    <volumen>125000</volumen>
-    <fechaBaja>null</fechaBaja>
+    <T02_CodDepartamento>ADM</T02_CodDepartamento>
+    <T02_DescDepartamento>Administración</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>125000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento></T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>COM</codigo>
-    <descripcion>Comercial</descripcion>
-    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
-    <volumen>240000</volumen>
-    <fechaBaja>null</fechaBaja>
+    <T02_CodDepartamento>COM</T02_CodDepartamento>
+    <T02_DescDepartamento>Comercial</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>240000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento></T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>EEE</codigo>
-    <descripcion>EEE</descripcion>
-    <FechaCreacion>2020-01-15 09:00:00</FechaCreacion>
-    <volumen>30</volumen>
-    <fechaBaja>2030-01-15 09:00:00</fechaBaja>
+    <T02_CodDepartamento>EEE</T02_CodDepartamento>
+    <T02_DescDepartamento>EEE</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2020-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>30</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2030-01-15 09:00:00</T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>EJE</codigo>
-    <descripcion>Ejemplo</descripcion>
-    <FechaCreacion>2026-10-07 00:00:00</FechaCreacion>
-    <volumen>22</volumen>
-    <fechaBaja>2026-10-03 00:00:00</fechaBaja>
+    <T02_CodDepartamento>EJE</T02_CodDepartamento>
+    <T02_DescDepartamento>Ejemplo</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2026-10-07 00:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>22</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2026-10-03 00:00:00</T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>FIN</codigo>
-    <descripcion>Finanzas</descripcion>
-    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
-    <volumen>180000</volumen>
-    <fechaBaja>2024-07-28 10:00:00</fechaBaja>
+    <T02_CodDepartamento>FIN</T02_CodDepartamento>
+    <T02_DescDepartamento>Finanzas</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>180000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2024-07-28 10:00:00</T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>INV</codigo>
-    <descripcion>Inversiones</descripcion>
-    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
-    <volumen>310000</volumen>
-    <fechaBaja>null</fechaBaja>
+    <T02_CodDepartamento>INV</T02_CodDepartamento>
+    <T02_DescDepartamento>Inversiones</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>310000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento></T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>OPT</codigo>
-    <descripcion>Optimizaciones</descripcion>
-    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
-    <volumen>180000</volumen>
-    <fechaBaja>2024-07-28 10:00:00</fechaBaja>
+    <T02_CodDepartamento>OPT</T02_CodDepartamento>
+    <T02_DescDepartamento>Optimizaciones</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>180000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2024-07-28 10:00:00</T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>PRO</codigo>
-    <descripcion>Departamento de Programación</descripcion>
-    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
-    <volumen>40000</volumen>
-    <fechaBaja>2029-01-15 09:00:00</fechaBaja>
+    <T02_CodDepartamento>PRO</T02_CodDepartamento>
+    <T02_DescDepartamento>Departamento de Programación</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>40000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2029-01-15 09:00:00</T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>PUB</codigo>
-    <descripcion>Departamento de Publicidad</descripcion>
-    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
-    <volumen>40000</volumen>
-    <fechaBaja>2029-01-15 09:00:00</fechaBaja>
+    <T02_CodDepartamento>PUB</T02_CodDepartamento>
+    <T02_DescDepartamento>Departamento de Publicidad</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>40000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2029-01-15 09:00:00</T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>SAN</codigo>
-    <descripcion>Departamento de Sanidad</descripcion>
-    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
-    <volumen>40000</volumen>
-    <fechaBaja>2029-01-15 09:00:00</fechaBaja>
+    <T02_CodDepartamento>SAN</T02_CodDepartamento>
+    <T02_DescDepartamento>Departamento de Sanidad</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>40000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2029-01-15 09:00:00</T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>SOS</codigo>
-    <descripcion>Despartamentop de sostenivilidad</descripcion>
-    <FechaCreacion>2020-01-15 09:00:00</FechaCreacion>
-    <volumen>3000</volumen>
-    <fechaBaja>2040-01-15 09:00:00</fechaBaja>
+    <T02_CodDepartamento>SOS</T02_CodDepartamento>
+    <T02_DescDepartamento>Despartamentop de sostenivilidad</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2020-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>3000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2040-01-15 09:00:00</T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>TEC</codigo>
-    <descripcion>Tecnología</descripcion>
-    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
-    <volumen>310000</volumen>
-    <fechaBaja>null</fechaBaja>
+    <T02_CodDepartamento>TEC</T02_CodDepartamento>
+    <T02_DescDepartamento>Tecnología</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>310000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento></T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>TRB</codigo>
-    <descripcion>Despartamentop de derechos de los trabajadores</descripcion>
-    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
-    <volumen>5000</volumen>
-    <fechaBaja>2030-01-15 09:00:00</fechaBaja>
+    <T02_CodDepartamento>TRB</T02_CodDepartamento>
+    <T02_DescDepartamento>Despartamentop de derechos de los trabajadores</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>5000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento>2030-01-15 09:00:00</T02_FechaBajaDepartamento>
   </departamento>
   <departamento>
-    <codigo>VEN</codigo>
-    <descripcion>Ventas</descripcion>
-    <FechaCreacion>2024-01-15 09:00:00</FechaCreacion>
-    <volumen>275000</volumen>
-    <fechaBaja>null</fechaBaja>
+    <T02_CodDepartamento>VEN</T02_CodDepartamento>
+    <T02_DescDepartamento>Ventas</T02_DescDepartamento>
+    <T02_FechaCreacionDepartamento>2024-01-15 09:00:00</T02_FechaCreacionDepartamento>
+    <T02_VolumenDeNegocio>275000</T02_VolumenDeNegocio>
+    <T02_FechaBajaDepartamento></T02_FechaBajaDepartamento>
   </departamento>
 </departamentos>
