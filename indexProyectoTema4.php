@@ -91,7 +91,7 @@
                 </tr>
                 <tr>
                     <td>7</td>
-                    <td>Página web que toma datos (código y descripción) de un fichero xml y los añade a la tabla
+                    <td>Página web que toma todos los datos de un fichero xml y los añade a la tabla
                     Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
                     directorio .../tmp/ del servidor</td>
                     <td><a href="codigoPHP/ejercicio07.php">Ejecutar</a></td>
@@ -99,7 +99,7 @@
                 </tr>
                 <tr>
                     <td>8</td>
-                    <td>Página web que toma datos (código y descripción) de la tabla Departamento y guarda en un
+                    <td>Página web que toma todos los datos de la tabla Departamento y guarda en un
                         fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
                         encuentra en el directorio .../tmp/ del servidor.</td>
                     <td><a href="codigoPHP/ejercicio08.php">Ejecutar</a></td>

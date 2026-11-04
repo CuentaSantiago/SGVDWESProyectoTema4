@@ -21,6 +21,7 @@
             try{
                 $miDB = new PDO($host,$USER,$PASSWORD); //conexion a la base de datos
                 $resultadoConsulta = $miDB->query('select * from T02_DEPARTAMENTO');//consulta
+                echo "<h2>Querry</h2>";
                 echo "<table>";
                 echo "<tr>";
                 echo "<th>Codigo</th>";
@@ -29,15 +30,42 @@
                 echo "<th>Valor de Departmento</th>";
                 echo "<th>FechaBaja</th>";
                 echo "</tr>";
-                while ($registro = $resultadoConsulta ->fetch()){//mostrar resultados
+                while ($registro = $resultadoConsulta ->fetchObject()){//mostrar resultados
                     echo "<tr>";
-                    echo '<td>'.$registro['T02_CodDepartamento'].'</td>';
-                    echo '<td>'.$registro["T02_DescDepartamento"].'</td>';
-                    $FechaCreacion = new DateTime($registro["T02_FechaCreacionDepartamento"]);
+                    echo '<td>'.$registro->T02_CodDepartamento.'</td>';
+                    echo '<td>'.$registro->T02_DescDepartamento.'</td>';
+                    $FechaCreacion = new DateTime($registro->T02_FechaCreacionDepartamento);
                     echo '<td>'.$FechaCreacion->format('d/m/Y').'</td>';
-                    echo '<td>'.number_format($registro["T02_VolumenDeNegocio"],2,',','.').' €</td>';
-                    if ($registro["T02_FechaBajaDepartamento"]!==null) {//comprobacion null
-                        $FechaBaja = new DateTime($registro["T02_FechaBajaDepartamento"]);
+                    echo '<td>'.number_format($registro->T02_VolumenDeNegocio,2,',','.').' €</td>';
+                    if ($registro->T02_FechaBajaDepartamento!==null) {//comprobacion null
+                        $FechaBaja = new DateTime($registro->T02_FechaBajaDepartamento);
+                        echo '<td>'.$FechaBaja->format('d/m/Y').'</td>';
+                    } else {
+                        echo '<td></td>';
+                    }
+                    echo "<tr>";
+                }
+                echo "<table>";
+                echo "<h2>Consulta preparada</h2>";
+                $resultadoConsulta = $miDB->prepare('select * from T02_DEPARTAMENTO');//consulta preparada
+                $resultadoConsulta->execute();//ejecutada
+                echo "<table>";
+                echo "<tr>";
+                echo "<th>Codigo</th>";
+                echo "<th>Nombre</th>";
+                echo "<th>Fecha Creacion</th>";
+                echo "<th>Valor de Departmento</th>";
+                echo "<th>FechaBaja</th>";
+                echo "</tr>";
+                while ($registro = $resultadoConsulta ->fetchObject()){//mostrar resultados
+                    echo "<tr>";
+                    echo '<td>'.$registro->T02_CodDepartamento.'</td>';
+                    echo '<td>'.$registro->T02_DescDepartamento.'</td>';
+                    $FechaCreacion = new DateTime($registro->T02_FechaCreacionDepartamento);
+                    echo '<td>'.$FechaCreacion->format('d/m/Y').'</td>';
+                    echo '<td>'.number_format($registro->T02_VolumenDeNegocio,2,',','.').' €</td>';
+                    if ($registro->T02_FechaBajaDepartamento!==null) {//comprobacion null
+                        $FechaBaja = new DateTime($registro->T02_FechaBajaDepartamento);
                         echo '<td>'.$FechaBaja->format('d/m/Y').'</td>';
                     } else {
                         echo '<td></td>';

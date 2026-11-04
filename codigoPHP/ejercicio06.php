@@ -25,41 +25,42 @@
             require_once '../core/ConexionDB.php'; //archivo para conexion a la base de datos
             $ok = true;
             try{
-                $Transaccion=new PDO($host,$USER,$PASSWORD);
-                $aregistros=array(
-                    ["T02_CodDepartamento"=> "TRB",
-                    "T02_DescDepartamento"=> "Despartamentop de derechos de los trabajadores",
-                    "T02_FechaCreacionDepartamento"=> "2024-01-15 09:00:00", 
-                    "T02_VolumenDeNegocio"=> 5000, 
-                    "T02_FechaBajaDepartamento"=> "2030-01-15 09:00:00"],
-                    ["T02_CodDepartamento"=> "SOS",
-                    "T02_DescDepartamento"=>"Despartamentop de sostenivilidad",
-                    "T02_FechaCreacionDepartamento"=>"2020-01-15 09:00:00",
-                    "T02_VolumenDeNegocio"=>3000,
-                    "T02_FechaBajaDepartamento"=> "2040-01-15 09:00:00"],
-                    ["T02_CodDepartamento"=> "EEE",
-                    "T02_DescDepartamento"=> "EEE",
-                    "T02_FechaCreacionDepartamento"=>"2020-01-15 09:00:00",
-                    "T02_VolumenDeNegocio"=>30,
-                    "T02_FechaBajaDepartamento"=> "2030-01-15 09:00:00"]
+                $Transaccion=new PDO($host,$USER,$PASSWORD);//conexion a base de datos
+                $ARegistros=array(//datos para insertar
+                    ["CodDepartamento"=> "TRB",
+                    "DescDepartamento"=> "Despartamentop de derechos de los trabajadores",
+                    "FechaCreacionDepartamento"=> "2024-01-15 09:00:00", 
+                    "VolumenDeNegocio"=> 5000, 
+                    "FechaBajaDepartamento"=> "2030-01-15 09:00:00"],
+                    ["CodDepartamento"=> "SOS",
+                    "DescDepartamento"=>"Despartamentop de sostenivilidad",
+                    "FechaCreacionDepartamento"=>"2020-01-15 09:00:00",
+                    "VolumenDeNegocio"=>3000,
+                    "FechaBajaDepartamento"=> "2040-01-15 09:00:00"],
+                    ["CodDepartamento"=> "EEE",
+                    "DescDepartamento"=> "EEE",
+                    "FechaCreacionDepartamento"=>"2020-01-15 09:00:00",
+                    "VolumenDeNegocio"=>30,
+                    "FechaBajaDepartamento"=> "2030-01-15 09:00:00"]
                     );
                 $Transaccion->beginTransaction();
                 $sqlInsert = <<<sql
                                 INSERT INTO T02_DEPARTAMENTO (T02_CodDepartamento, T02_DescDepartamento, T02_FechaCreacionDepartamento, T02_VolumenDeNegocio, T02_FechaBajaDepartamento)
-                                VALUES (:T02_CodDepartamento, :T02_DescDepartamento, :T02_FechaCreacionDepartamento, :T02_VolumenDeNegocio, :T02_FechaBajaDepartamento)
-                            sql;
+                                VALUES (:CodDepartamento, :DescDepartamento, :FechaCreacionDepartamento, :VolumenDeNegocio, :FechaBajaDepartamento)
+                            sql;//Insert preparado
                 $registosPreparados = $Transaccion->prepare($sqlInsert); //para empezar a probas los nuevos registros
                 
-                foreach($aregistros as $registros){
-                    $registosPreparados->bindParam(":T02_CodDepartamento", $registros["T02_CodDepartamento"]);
-                    $registosPreparados->bindParam(":T02_DescDepartamento", $registros["T02_DescDepartamento"]);
-                    $registosPreparados->bindParam(":T02_FechaCreacionDepartamento", $registros["T02_FechaCreacionDepartamento"]);
-                    $registosPreparados->bindParam(":T02_VolumenDeNegocio", $registros["T02_VolumenDeNegocio"]);
-                    $registosPreparados->bindParam(":T02_FechaBajaDepartamento", $registros["T02_FechaBajaDepartamento"]);
-                    $registosPreparados->execute();
+                foreach($ARegistros as $registros){//insetando datos con bindParam
+                    $registosPreparados->bindParam(":CodDepartamento", $registros["CodDepartamento"]);
+                    $registosPreparados->bindParam(":DescDepartamento", $registros["DescDepartamento"]);
+                    $registosPreparados->bindParam(":FechaCreacionDepartamento", $registros["FechaCreacionDepartamento"]);
+                    $registosPreparados->bindParam(":VolumenDeNegocio", $registros["VolumenDeNegocio"]);
+                    $registosPreparados->bindParam(":FechaBajaDepartamento", $registros["FechaBajaDepartamento"]);
+                    $registosPreparados->execute();//executando insert
                 }
                 $Transaccion->commit(); // Confirma los cambios y los consolida
-                $resultadoConsulta = $Transaccion->query('select * from T02_DEPARTAMENTO');//consulta
+                $resultadoConsulta = $Transaccion->prepare('select * from T02_DEPARTAMENTO');//consulta preparada
+                $resultadoConsulta->execute();//ejecutada
                 echo "<table>";
                 echo "<tr>";
                 echo "<th>Codigo</th>";
@@ -68,15 +69,15 @@
                 echo "<th>Valor de Departmento</th>";
                 echo "<th>FechaBaja</th>";
                 echo "</tr>";
-                while ($registro = $resultadoConsulta ->fetch()){//mostrar resultados
+                while ($registro = $resultadoConsulta ->fetchObject()){//mostrar resultados
                     echo "<tr>";
-                    echo '<td>'.$registro['T02_CodDepartamento'].'</td>';
-                    echo '<td>'.$registro["T02_DescDepartamento"].'</td>';
-                    $FechaCreacion = new DateTime($registro["T02_FechaCreacionDepartamento"]);
+                    echo '<td>'.$registro->T02_CodDepartamento.'</td>';
+                    echo '<td>'.$registro->T02_DescDepartamento.'</td>';
+                    $FechaCreacion = new DateTime($registro->T02_FechaCreacionDepartamento);
                     echo '<td>'.$FechaCreacion->format('d/m/Y').'</td>';
-                    echo '<td>'.number_format($registro["T02_VolumenDeNegocio"],2,',','.').' €</td>';
-                    if ($registro["T02_FechaBajaDepartamento"]!==null) {//comprobacion null
-                        $FechaBaja = new DateTime($registro["T02_FechaBajaDepartamento"]);
+                    echo '<td>'.number_format($registro->T02_VolumenDeNegocio,2,',','.').' €</td>';
+                    if ($registro->T02_FechaBajaDepartamento!==null) {//comprobacion null
+                        $FechaBaja = new DateTime($registro->T02_FechaBajaDepartamento);
                         echo '<td>'.$FechaBaja->format('d/m/Y').'</td>';
                     } else {
                         echo '<td></td>';
@@ -86,7 +87,7 @@
                 echo "<table>";
             }catch(PDOException $e){//para atrapar excepciones
                 $Transaccion->rollback(); 
-                if(str_contains($e,"1062 Duplicate entry")){
+                if(str_contains($e,"1062 Duplicate entry")){//en caso de que ya haya sido ejecutado
                     echo "<h3>Este ejercicio ya se ha ejecutado, espere unos segundos para que se borren los campos para probarlo de nuevo</h3>";
                     $Transaccion->beginTransaction(); //para empezar a probas los nuevos registros
                     $Transaccion->exec("delete from T02_DEPARTAMENTO where T02_CodDepartamento='TRB';");
@@ -94,7 +95,7 @@
                     $Transaccion->exec("delete from T02_DEPARTAMENTO where T02_CodDepartamento='EEE';");
                     $Transaccion->commit();
                     $self = $_SERVER['PHP_SELF'];
-                    header("refresh:5; url=$self");
+                    header("refresh:2; url=$self");
                 }
                 else{
                     echo $e->getMessage()."<br>";
