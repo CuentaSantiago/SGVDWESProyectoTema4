@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EAEDED;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+header {
+    background-color: #232F3E;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Contenedor principal izquierda */
+div {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+    margin-top: 70px;
+}
+/* Ajustes tabla */
+table{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 3px solid white;
+    border-collapse: collapse;
+}
+tr, td, th, thead, tbody{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 3px solid black;
+}
+/* Títulos de secciones */
+h2 {
+    color: #007185;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+H4 {
+    margin-bottom: 10px;
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    color: #FF9900;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #B12704;
+}
+
+/* Footer */
+footer {
+    background-color: #232F3E;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    font-size: 20px;
+}
+
+footer i {
+    margin: 0 10px;
+    color: #FF9900;
+}
+
+footer p {
+    margin: 5px 0;
+}
