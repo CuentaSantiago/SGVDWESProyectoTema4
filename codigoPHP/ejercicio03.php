@@ -26,6 +26,7 @@
                     require_once '../core/ConexionDB.php'; //archivo para conexion a la base de datos
                     require_once'../core/231018libreriaValidacion.php'; //archivo para validaciones
                     $miDB = new PDO($host,$USER,$PASSWORD); //conexion a la base de datos
+                    $miDB->beginTransaction();
                 ?>
             <div class="ejercicio">
                 <?php
@@ -46,12 +47,20 @@
                         ];// Array donde recogeremos las respuestas correctas (si $entradaOK)
                         try{
                             if(isset($_POST["submit"])){
+                                $sqlCheck = <<<sql
+                                Select * from T02_DEPARTAMENTO where T02_CodDepartamento=:CodDepartamento
+                                sql;
+                                $sqlCheckexecute=$miDB->prepare($sqlCheck);
                                 $aRespuestas['Dnombre'] = $_POST['Dnombre'] ?? '';
                                 $aRespuestas['Ddescripcion'] = $_POST['Ddescripcion'] ?? '';
                                 $aRespuestas['DFechaCreacion'] = $_POST['DFechaCreacion'] ?? '';
                                 $aRespuestas['Dsaldo'] = $_POST['Dsaldo'] ?? '';
                                 $aRespuestas['DFechaBaja'] = $_POST['DFechaBaja'] ?? '';
+                                $sqlCheckexecute->bindParam(":CodDepartamento", $aRespuestas['Dnombre']);
                                 $aErrores['Dnombre'] = validacionFormularios::comprobarAlfabetico($aRespuestas['Dnombre'],100,0,1);
+                                if($sqlCheckexecute->execute()){
+                                    $aErrores['Dnombre'] = "Error, este departamento ya existe";
+                                }
                                 $aErrores['Ddescripcion'] = validacionFormularios::comprobarAlfabetico($aRespuestas['Ddescripcion'],100,0,1);
                                 $aErrores['DFechaCreacion'] = validacionFormularios::validarFecha($aRespuestas['DFechaCreacion'],"01/01/2027","01/01/1900", 1);
                                 $aErrores['Dsaldo'] = validacionFormularios::comprobarFloat($aRespuestas['Dsaldo'],100,0,1);

@@ -1,5 +1,7 @@
 <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="webroot/css/estilos.css">
+    </head>
     <body>
         <h1><a href='../indexProyectoTema4.php'>volver</a></h1>
         <?php //para ver errores

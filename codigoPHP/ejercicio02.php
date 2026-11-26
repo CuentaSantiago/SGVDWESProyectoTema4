@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Ejercicio 2</title>
+        <link rel="stylesheet" type="text/css" href="webroot/css/estilos.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             table, td, tr, th{
